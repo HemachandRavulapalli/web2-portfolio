@@ -3,28 +3,38 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: "HTML/CSS", level: 90, category: "frontend" },
+  { name: "JavaScript", level: 85, category: "frontend" },
+  { name: "ReactJS", level: 75, category: "frontend" },
+  { name: "Tailwind CSS", level: 70, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  { name: "Python", level: 90, category: "backend" },
+  { name: "Java", level: 85, category: "backend" },
+  { name: "Django", level: 70, category: "backend" },
+  { name: "Node.js", level: 65, category: "backend" },
+  { name: "Express", level: 60, category: "backend" },
+
+  // Databases & Middleware
+  { name: "MySQL", level: 80, category: "database" },
+  { name: "MongoDB", level: 75, category: "database" },
+  { name: "SQL Server", level: 70, category: "database" },
+  { name: "ServiceNow", level: 65, category: "middleware" },
+  { name: "OLAP", level: 60, category: "middleware" },
+
+  // AI & Data Science
+  { name: "Machine Learning", level: 75, category: "ai" },
+  { name: "Data Science", level: 80, category: "ai" },
+  { name: "R Programming", level: 65, category: "ai" },
+  
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
+  { name: "Git/GitHub", level: 80, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
+  { name: "Tableau", level: 70, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "database","middleware","ai", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
