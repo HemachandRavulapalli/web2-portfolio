@@ -1,20 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { NotFound } from "./pages/NotFound";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { Layout } from "@/components/Layout";
+import Home from "@/pages/Home";
 import { Toaster } from "@/components/ui/toaster";
 
-function App() {
+const App = () => {
   return (
     <>
-      <Toaster />
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <Toaster />
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Layout>
+        </Router>
+      </ThemeProvider>
     </>
   );
-}
+};
 
 export default App;

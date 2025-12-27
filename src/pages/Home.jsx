@@ -1,34 +1,25 @@
-import { Navbar } from "../components/Navbar";
-import { ThemeToggle } from "../components/ThemeToggle";
-import { StarBackground } from "@/components/StarBackground";
-import { HeroSection } from "../components/HeroSection";
-import { AboutSection } from "../components/AboutSection";
-import { SkillsSection } from "../components/SkillsSection";
-import { ProjectsSection } from "../components/ProjectsSection";
-import { ContactSection } from "../components/ContactSection";
-import { Footer } from "../components/Footer";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Skills } from "@/components/Skills";
+import { Projects } from "@/components/Projects";
+import { Certifications } from "@/components/Certifications";
+// import { Research } from "@/components/Research";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
-export const Home = () => {
+const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Theme Toggle */}
-      <ThemeToggle />
-      {/* Background Effects */}
-      <StarBackground />
-
-      {/* Navbar */}
-      <Navbar />
-      {/* Main Content */}
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
-      </main>
-
-      {/* Footer */}
+    <div className="flex flex-col">
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Certifications />
+      {/* <Research /> */}
+      <Contact />
       <Footer />
     </div>
   );
 };
+
+export default Home;

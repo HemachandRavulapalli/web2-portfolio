@@ -1,19 +1,7 @@
-import { ArrowUp } from "lucide-react";
-
 export const Footer = () => {
   return (
-    <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-      {" "}
-      <p className="text-sm text-muted-foreground">
-        {" "}
-        &copy; {new Date().getFullYear()} Crafted with passion by Hemachand Ravulapalli
-      </p>
-      <a
-        href="#hero"
-        className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-      >
-        <ArrowUp size={20} />
-      </a>
+    <footer className="py-8 text-center text-gray-600 text-sm bg-[#0B0F1A] border-t border-white/5">
+      <p>&copy; {new Date().getFullYear()} Hemachand Ravulapalli. Built with React, Tailwind v4, & Framer Motion.</p>
     </footer>
   );
 };
